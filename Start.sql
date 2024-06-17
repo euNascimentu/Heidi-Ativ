@@ -120,19 +120,23 @@ SELECT * FROM paciente
 
 SELECT * FROM recepcionista
 
+SELECT * FROM medico
+
+SELECT * FROM consulta
+
 /*Inserindo 3 pacientes*/
 INSERT INTO paciente (nome, dataNascimento, cpf, email, tipoSanguineo, doencaPaciente)
-VALUES ('Josefino Pereira', '1964-05-3 06:37','57863407902', 'josefino@gmail.com', 'O+', 'Tuberculose')
+VALUES ('Josefino Pereira', '1964-05-3 06:37','57863407902', 'josefino@gmail.com', 'O+', 'Tuberculose');
 
 INSERT INTO paciente (nome, dataNascimento, cpf, tipoSanguineo)
-VALUES ('Marizete Silva','1953-02-14 12:30:18','12398764503','AB-')
+VALUES ('Marizete Silva','1953-02-14 12:30:18','32134356765','AB-');
 
 INSERT INTO paciente (nome, dataNascimento, cpf, email, tipoSanguineo, doencaPaciente)
-VALUES ('Matheus Marani', '2006-12-06 21:58:32', '45689635712', 'matheusmarani12@gmail.com', 'A+', 'Câncer Terminal Pulmonar')
+VALUES ('Matheus Marani', '2006-12-06 21:58:32', '45689635712', 'matheusmarani12@gmail.com', 'A+', 'Câncer Terminal Pulmonar');
 
 UPDATE paciente
-SET
-WHERE idPaciente =
+SET cpf = '32134356765'
+WHERE idPaciente = 2
 
 /*Inserindo 3 recepcionistas*/
 
@@ -141,10 +145,15 @@ SET cidade = 'São Vicente'
 WHERE idRecepcionista = 2
 
 INSERT INTO recepcionista (nomeRecepcionista, loginRecepcionista, senha, celular, nomeLogradouro, numero, complemento, cidade, cep, estado)
-VALUES ('Fabiana Nascimento', 'fabiananascimento', '14021984', '13974118720', 'Conselheiro Nébias', '309', 'Apart.', 'Santos', '11015-003', 'SP')
+VALUES ('Fabiana Nascimento', 'fabiananascimento', '14021984', '13974118720', 'Conselheiro Nébias', '309', 'Apart.', 'Santos', '11015-003', 'SP');
 
 INSERT INTO recepcionista (nomeRecepcionista, loginRecepcionista, senha, celular, nomeLogradouro, numero, complemento, cidade, cep, estado)
-VALUES ('Kauan Quaresma', 'kauanbeck', 'eujgolol', '13974586234', 'Carijós', '23', 'Casa', 'São Vicente', '11687698', 'SP')
+VALUES ('Kauan Quaresma', 'kauanbeck', 'eujgolol', '13974586234', 'Carijós', '23', 'Casa', 'São Vicente', '11687698', 'SP');
 
 INSERT INTO recepcionista (nomeRecepcionista, loginRecepcionista, senha, celular, nomeLogradouro, numero, complemento, cidade, cep, estado)
-VALUES ('Arley Siaci', 'arleydocente', 'arley123', '13974235487', 'Guarani', '574', 'Casa', 'São Vicente', '11654895', 'SP')
+VALUES ('Arley Siaci', 'arleydocente', 'arley123', '13974235487', 'Guarani', '574', 'Casa', 'São Vicente', '11654895', 'SP');
+
+/*Inserindo consultas*/
+
+INSERT INTO consulta (idMedico, idPaciente, idRecepcionista, dataHoraConsulta, tipoConsulta)
+VALUES (1, 3, 1, '2024-07-22 14:30', 0)
